@@ -1,0 +1,131 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Rate Prediction</title>
+
+    <link rel="icon" href="./static/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./static/styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">Crime Rate Predictor</h1>
+        <h2 class="tagline">Unlock safety: Reduce crime rate together</h2>
+    </header>
+
+    <section class="section1">
+        <form id="prediction-form">
+            <table class="table1">
+                <tr>
+                    <td class="label">
+                        <label for="city">Select City Name</label>
+                    </td>
+                    <td class="sel">
+                        <select name="city" id="city" required>
+                            <option value="">--Select City--</option>
+                            <option value="0">Ahmedabad</option>
+                            <option value="1">Bengaluru</option>
+                            <option value="2">Chennai</option>
+                            <option value="3">Coimbatore</option>
+                            <option value="4">Delhi</option>
+                            <option value="5">Ghaziabad</option>
+                            <option value="6">Hyderabad</option>
+                            <option value="7">Indore</option>
+                            <option value="8">Jaipur</option>
+                            <option value="9">Kanpur</option>
+                            <option value="10">Kochi</option>
+                            <option value="11">Kolkata</option>
+                            <option value="12">Kozhikode</option>
+                            <option value="13">Lucknow</option>
+                            <option value="14">Mumbai</option>
+                            <option value="15">Nagpur</option>
+                            <option value="16">Patna</option>
+                            <option value="17">Pune</option>
+                            <option value="18">Surat</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="crime">Select Crime Type</label>
+                    </td>
+                    <td class="sel">
+                        <select name="crime" id="crime" required>
+                            <option value="">--Select Crime Type--</option>
+                            <option value="9">Murder</option>
+                            <option value="8">Kidnapping</option>
+                            <option value="7">Economic Offences</option>
+                            <option value="6">Cyber Crimes</option>
+                            <option value="5">Crime against women</option>
+                            <option value="4">Crime against children</option>
+                            <option value="3">Crime against Senior Citizen</option>
+                            <option value="2">Crime against ST</option>
+                            <option value="1">Crime against SC</option>
+                            <option value="0">Crime Committed by Juveniles</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="year-dropdown">Select Year</label>
+                    </td>
+                    <td class="sel">
+                        <select name="year" id="year-dropdown" required>
+                            <option value="">--Select Year--</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button">
+                <input type="submit" class="btn" id="predict_button" value="Predict">
+            </div>
+
+            <p id="message" role="status"></p>
+        </form>
+    </section>
+
+    <section>
+        <h2 id="about">About the Application</h2>
+        <p id="introduction">
+            Crime rate prediction can help law enforcement agencies understand
+            crime patterns, anticipate future trends, and plan resources to
+            improve public safety.
+
+            The dataset for this project is based on crime statistics for
+            19 Indian metropolitan cities from 2014 to 2021, covering ten
+            categories of crime.
+
+            The project uses a Random Forest Regression model to estimate
+            crime rates based on city, crime type, and year.
+        </p>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div id="developer">
+                <h3>Major Project: Crime Rate Prediction System</h3>
+                <p>Developed By: Kul Chandra Bhatt, Anup Ghimire, Atul Khetan</p>
+                <p>B.Tech Final Year • Jaypee Institute of Information Technology • 2025</p>
+                <p>Project Guide: Dr. Niyati Aggrawal</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/main.js"></script>
+    <script>
+        document.getElementById("prediction-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("message").textContent =
+                "The prediction service requires the Python backend. This GitHub Pages site cannot run the model directly.";
+        });
+    </script>
+</body>
+</html>
+```
